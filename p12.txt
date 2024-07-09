@@ -1,0 +1,27 @@
+//program o demonstrate else if
+import java.util.Scanner;
+public class p12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method s
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter marks");
+		int marks=sc.nextInt();
+		
+	if(marks>=75)
+		System.out.println("Distinction");
+	else if(marks>=60 && marks<75 )
+		System.out.println("First class");
+	else if(marks>=50 && marks<60)
+		System.out.println("second class");
+	else if (marks>=35 && marks<50)
+		System.out.println("pass class");
+	else
+		System.out.println("Fail");
+	}
+
+}
+******************************output*****************************************
+Enter marks
+95
+Distinction

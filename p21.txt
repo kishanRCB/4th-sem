@@ -1,0 +1,17 @@
+// program to demonstrate package
+import cs.CSDEMO;
+import me.MEDEMO;
+public class p21 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CSDEMO c1=new CSDEMO();
+		c1.print();
+		MEDEMO m1=new MEDEMO();
+		m1.print();
+	}
+
+}
+***************************output*************************************
+from CS package
+from ME package

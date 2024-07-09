@@ -1,0 +1,12 @@
+package p2;
+import p1.A;
+public class E {
+	public void printx()
+	{
+		A a1=new A();
+		System.out.println("from class E x="+a1.x);
+	}
+	
+
+}
+

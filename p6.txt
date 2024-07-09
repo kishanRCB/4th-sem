@@ -1,0 +1,47 @@
+// program to demonstarte This keyword
+class Emp
+{
+	int eid;
+	String ename;
+	float esal;
+	
+	public Emp()
+	{
+		eid=1;
+		ename="tom";
+		esal=2000;			
+	}
+	public Emp(int eid,String ename,float esal)
+	{
+		this.eid=eid;
+		this.ename=ename;
+		this.esal=esal;
+		
+	}
+	public void display()
+	{
+	System.out.println("eid="+eid);
+	System.out.println("ename="+ename);
+	System.out.println("esal="+esal);
+	}
+}
+
+
+public class p6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Emp e1=new Emp();
+		Emp e2=new Emp(2,"sachin",2000);
+		e1.display();
+		e2.display();
+	}
+
+}
+*******************************output***************************************
+eid=1
+ename=tom
+esal=2000.0
+eid=2
+ename=sachin
+esal=2000.0

@@ -1,0 +1,35 @@
+// program to demonstrate class extends a class and implements interface  at same time
+
+interface A
+{
+	int x=20;
+	public void m1();
+}
+class B implements A
+{
+	public void m1()
+	{
+		System.out.println("from m1 x="+x);
+	}
+}
+class C extends B implements A
+{
+	int y=30;
+	public void m2()
+	{
+		System.out.println("from m2 y="+y);
+	}
+}
+public class p39 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		C c1=new C();
+		c1.m1();
+		c1.m2();
+	}
+
+}
+*********************output*****************************
+from m1 x=20
+from m2 y=30

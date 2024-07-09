@@ -1,0 +1,31 @@
+// program to demonstrate Annotations
+class A
+{
+	int x=10;
+	public void printx()
+	{
+		System.out.println("from class A x="+x);
+	}
+}
+class B extends A
+{
+	int y=20;
+	@Override
+	public void printx()
+	{
+		super.printx();
+		System.out.println("from class B x="+x);
+	}
+}
+public class P51 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		B b1=new B();
+		b1.printx();
+	}
+
+}
+***************************output**********************************
+from class A x=10
+from class B x=10

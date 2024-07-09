@@ -1,0 +1,43 @@
+// program to demonstrate open closed principle
+
+class Emp 
+{
+	int eid;
+	String ename;
+	float esal;
+	public void display()
+	{
+		System.out.println("eid="+eid);
+		System.out.println("ename="+ename);
+		System.out.println("esal="+esal);
+	}
+}
+class NewEmp extends Emp
+{
+	String location;
+	public void display()
+	{
+		super.display();
+		System.out.println("location="+location);
+	}
+	
+}
+public class p30 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		NewEmp e1=new NewEmp();
+		e1.eid=102;
+		e1.ename="jack";
+		e1.esal=30000;
+		e1.location="Bengaluru";
+		
+		e1.display();
+	}
+
+}
+***********************output***************************************
+eid=102
+ename=jack
+esal=30000.0
+location=Bengaluru

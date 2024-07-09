@@ -1,0 +1,31 @@
+// program to demonstrate single inheritance
+class A
+{
+	int x=10;
+	public void print()
+	{
+		System.out.println("x="+x);
+	}
+}	
+class B extends A
+	{
+	int y=20;
+	public void print()
+		{
+			super.print();
+			System.out.println("y="+y);
+		}
+	}
+
+public class p26 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		B b1=new B();
+		b1.print();
+	}
+
+}
+**********************output******************************************
+x=10
+y=20

@@ -1,0 +1,37 @@
+// Program to demonstrate interface can extends interface
+
+interface A
+{
+	int x=20;
+	public void m1();
+}
+interface B extends A
+{
+	int y=30;
+	public void m2();	
+}
+class D implements B
+{
+	public void m1()
+	{
+		System.out.println("from class c m1 x="+x);
+	}
+	public void m2()
+	{
+		System.out.println("from class c m2 y="+y);
+	}
+}
+
+public class P37 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		D d1=new D();
+		d1.m1();
+		d1.m2();
+	}
+
+}
+************************output******************************************
+from class c m1 x=20
+from class c m2 y=30

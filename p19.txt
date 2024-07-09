@@ -1,0 +1,84 @@
+// program to demonstrate Encapsulation
+
+class cat
+{
+	private int weight;
+	private String colour;
+	private String name;
+	private int age;
+	
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		if(age>=1 || age<=20)
+		this.age = age;
+		else
+			System.out.println("Incorrect age");
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		if(name.equals("TOM")|| name.equals("JACK"))
+		this.name = name;
+		else
+			System.out.println("Incorrect name");
+	}
+
+	public String getColour() {
+		return colour;
+	}
+
+	public void setColour(String colour) {
+		if(colour.equals("white")|| colour.equals("black"))
+		this.colour = colour;
+		else
+			System.out.println("Incorrect colour");
+	}
+
+	public int getWeight() {
+		return weight;
+	}
+
+	public void setWeight(int w) {
+		if(w>1 && w<=10)
+			weight = w;
+		else
+			System.out.println("Incorrect weight");
+	}
+	
+}
+
+
+
+public class p19 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		cat tom=new cat();
+		tom.setWeight(3);
+		tom.setColour("white");
+		tom.setName("JACK");
+		tom.setAge(5);
+		int w=tom.getWeight();
+		System.out.println("weight="+w);
+		String c=tom.getColour();
+		System.out.println("colour="+c);
+		String n=tom.getName();
+		System.out.println("NAME="+n);
+		int a=tom.getAge();
+		System.out.println("age="+a);
+	}
+
+}
+
+
+************************output**************************************
+weight=3
+colour=white
+NAME=JACK
+age=5

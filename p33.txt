@@ -1,0 +1,39 @@
+// program to demonstrate Abstraction
+
+abstract class Animal
+{
+	public void eat()
+	{
+		System.out.println("Animal is eating");
+	}
+}
+abstract class Herbivorus extends Animal
+{
+	public void eat()
+	{
+		System.out.println("Herbivorus  is eating");
+	}
+}
+class cow extends Herbivorus 
+{
+	public void eat()
+	{
+		System.out.println("cow is eating");
+	}
+}
+
+
+public class p33 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		cow c1=new cow();
+		c1.eat();
+		Animal a2=new cow();
+		a2.eat();
+	}
+
+}
+***************************output***********************************
+cow is eating
+cow is eating

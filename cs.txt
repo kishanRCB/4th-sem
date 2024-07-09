@@ -1,0 +1,9 @@
+package cs;
+
+public class CSDEMO 
+{
+	public void print()
+	{
+		System.out.println("from CS package");
+	}
+}

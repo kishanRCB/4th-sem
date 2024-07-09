@@ -1,0 +1,30 @@
+// program to demonstrate polymorphism
+
+class makesum
+{
+	public void add(int a,int b)
+	{
+		int res=a+b;
+		System.out.println("result="+res);
+	}
+	public void add (double a,double b)
+	{
+		double res=a+b;
+		System.out.println("result="+res);
+	}
+}
+
+public class p31 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		makesum m1=new makesum();
+		m1.add(3, 7);
+		m1.add(2.4,3.1);
+		
+	}
+
+}
+**************************output**********************************
+result=10
+result=5.5

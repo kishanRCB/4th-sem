@@ -1,0 +1,44 @@
+// program to demonstrate Throw
+class MyException extends Exception
+{
+	public MyException()
+	{
+		System.out.println("age less than 18");
+	}
+}
+class checkException
+{
+	public void checkAge(int age)throws MyException
+	{
+		if(age <18)
+		{
+			MyException e=new MyException();
+			throw e;
+		}
+	}
+}
+public class P47 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int age=12;
+		System.out.println("main starts");
+		checkException ce=new checkException();
+		try
+		{
+			ce.checkAge(age);
+		}
+		catch(MyException e)
+		{
+			System.out.println("myException caught "+e);
+		}
+		System.out.println("main ends");
+	}
+
+}
+
+*****************************output****************************************
+main starts
+age less than 18
+myException caught MyException
+main ends

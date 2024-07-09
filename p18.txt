@@ -1,0 +1,28 @@
+// program to demonstrate do-while
+import java.util.Scanner;
+public class p18 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Scanner sc=new Scanner(System.in);
+		 String s;
+		 do
+		 {
+			 System.out.println("Enter Exit to stop the loop ");
+			 s=sc.next();
+			 System.out.println(s);
+		 
+		 }while(!s.equals("exit"));
+		 System.out.println("End of the loop");
+		 
+	}
+
+}
+******************************output******************************************
+Enter Exit to stop the loop 
+hi
+hi
+Enter Exit to stop the loop 
+exit
+exit
+End of the loop

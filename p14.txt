@@ -1,0 +1,30 @@
+//program to demonstrate While loop
+import java.util.Scanner;
+public class p14 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number");
+		int n=sc.nextInt();
+		int fact=1;
+		
+		if(n==0)
+			System.out.println("Factorial is 1");
+		else
+		{
+			while(n>0)
+			{
+				fact=fact*n;
+				n=n-1;
+			}
+			System.out.println("Factorial is"+fact);
+		}
+		
+	}
+
+}
+****************************output****************************************
+Enter number
+5
+Factorial is120

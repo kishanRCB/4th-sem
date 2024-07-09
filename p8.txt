@@ -1,0 +1,16 @@
+//program to demonstrate Evaluation of Expressions
+public class p8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int res;
+		res=2+3*4;
+		System.out.println("result is="+res);
+		res=((2+3)*4);
+		System.out.println("result is="+res);
+	}
+
+}
+*********************output***********************************
+result is=14
+result is=20

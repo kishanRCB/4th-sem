@@ -1,0 +1,27 @@
+//program to demonstrate switch
+import java.util.Scanner;
+public class p13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Programming langauge");
+		String lang=sc.next();
+		
+		switch(lang)
+		{
+		case "c":System.out.println("c langauge");
+				break;
+		case "python":System.out.println("pyhton langauge");
+				break;
+		case "java":System.out.println("java langauge");
+				break;
+		default:System.out.println("No matches");
+		}
+	}
+
+}
+***************************output**************************************
+Enter Programming langauge
+c++
+No matches

@@ -1,0 +1,22 @@
+//program to Read input from the keyboard
+import java.util.Scanner;
+public class p9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter Number 1 ");
+		Scanner sc=new Scanner(System.in);
+		int n1=sc.nextInt();
+		System.out.println("Enter Number 2 ");
+		int n2=sc.nextInt();
+		int res=n1+n2;
+		System.out.println("result is "+res);
+	}
+
+}
+************************output*************************************
+Enter Number 1 
+12
+Enter Number 2 
+25
+result is 37

@@ -1,0 +1,36 @@
+//program to demonstrate interface segregation principle
+interface northamercianCountries
+{
+	public void usa();
+}
+interface europeanCountries
+{
+	public void germany();
+	public void france();
+}
+interface asianCountries 
+{
+	public void india();
+}
+interface australiaCountries
+{
+	public void australia();
+}
+class Tour implements northamercianCountries
+{
+	public void usa()
+	{
+		System.out.println("i am going to USA");
+	}
+}
+public class P50 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Tour t1=new Tour();
+		t1.usa();
+	}
+
+}
+*********************************output********************************
+i am going to USA

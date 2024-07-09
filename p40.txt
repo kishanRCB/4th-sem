@@ -1,0 +1,60 @@
+// program to demonstrate same interface  can be implemented by lot of classes
+
+interface A
+{
+	int x=20;
+	public void m1();
+}
+class B implements A
+{
+	public void m1()
+	{
+		System.out.println("from B m1 x="+x);
+	}
+}
+class C implements A
+{
+	int y=30;
+	public void m1()
+	{
+		System.out.println("from C m1 x="+x);
+	}
+	public void m2()
+	{
+		System.out.println("from C m2 y="+y);
+	}
+}
+class D implements A
+{
+	int z=30;
+	public void m1()
+	{
+		System.out.println("from D m1 x="+x);
+	}
+	public void m3()
+	{
+		System.out.println("from D m3 z="+z);
+	}
+}
+public class p40 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		D d1=new D();
+		d1.m1();
+		d1.m3();
+		C c1=new C();
+		c1.m1();
+		c1.m2();
+		A a1=new B();
+	        a1.m1();
+	}
+
+}
+*********************output*******************************
+from D m1 x=20
+from D m3 z=30
+from C m1 x=20
+from C m2 y=30
+from B m1 x=20
+

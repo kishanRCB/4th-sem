@@ -1,0 +1,29 @@
+//program to demonstrate continue//
+import java .util.Scanner;
+public class p16 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter number of terms");
+		int n=sc.nextInt();
+		
+		for(int i=0;i<n;i++)
+		{
+			if(i==2)
+				continue;
+			else
+				System.out.println("i="+i);
+		}
+
+	}
+
+}
+*******************************output*********************************
+Enter number of terms
+5
+i=0
+i=1
+i=3
+i=4

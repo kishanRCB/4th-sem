@@ -1,0 +1,38 @@
+
+// program to demonstrate File Reader
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class P49 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileWriter fw=null;
+		try
+		{
+			fw=new  FileWriter("C:\\Users\\CBKPC\\eclipse-workspace\\n\\neww\\src\\w.txt");
+			fw.write("How are you");
+			fw.append(" Fine");
+		}
+		
+		catch(IOException e)
+		{
+			System.out.println("IOException"+e);
+		}
+		finally
+		{
+			try
+			{
+				fw.close();
+			}
+			catch(Exception e)
+			{
+				System.out.println("FileNotClosedException"+e);
+			}
+		}
+	}
+
+}
+*******************************output****************************
+
+How are you Fine

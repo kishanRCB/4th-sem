@@ -1,0 +1,33 @@
+//program to demonstrate Enumerations
+enum  seasons
+{
+	winter(10),spring(20),summer(30),rainy(40);
+	int value;
+	private seasons(int value)
+	{
+		this.value=value;
+	}
+}
+public class P52 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enumerations values");
+		for(seasons s:seasons.values())
+		{
+			System.out.println(s.value);
+			System.out.println(s);
+		}
+	}
+
+}
+****************************output****************************
+Enumerations values
+10
+winter
+20
+spring
+30
+summer
+40
+rainy

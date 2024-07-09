@@ -1,0 +1,112 @@
+/*program to demonstrate JDBC with MYSQL*/
+import java.sql.*;
+public class MDemo {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	Connection con=null;
+	Statement st=null;
+	ResultSet rs=null;
+	
+	try
+	{	
+		Class.forName("com.mysql.cj.jdbc.Driver");
+	    con=DriverManager.getConnection("jdbc:mysql://localhost:3306/db","cbkpc","cbkpc");
+	    		
+		st=con.createStatement();
+		String s="insert into emp values(6,'siddu',800)";
+		st.executeUpdate(s);
+		rs=st.executeQuery("select * from emp");
+			
+		while(rs.next())
+		{
+		    System.out.print(rs.getInt(1));
+		    System.out.print("\t"+rs.getString(2));
+		    System.out.print("\t"+rs.getInt(3));
+		    System.out.print("\n");
+		    }
+	}
+		catch(Exception e)
+		{
+			System.out.println("Exception"+e);	
+		}
+		finally
+		{
+			try
+	           {
+				rs.close();
+				st.close();
+				con.close();
+	           }
+			catch(Exception e)
+			{
+				System.out.println("Exception"+e);	
+			}
+		}
+	}
+}
+
+Steps in MYSQL
+Enter password: *****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 8.0.36 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
+mysql> create database db;
+Query OK, 1 row affected (0.52 sec)
+
+mysql> use db;
+Database changed
+mysql> create table emp
+    -> (eid int,
+    -> ename varchar(20),
+    -> esal int);
+Query OK, 0 rows affected (1.63 sec)
+
+mysql> insert into emp values(1,"ajju",300);
+Query OK, 1 row affected (0.14 sec)
+
+mysql> insert into emp values(2,"kallu",400);
+Query OK, 1 row affected (0.16 sec)
+
+mysql> insert into emp values(3,"dundu",500);
+Query OK, 1 row affected (0.19 sec)
+
+mysql> insert into emp values(4,"mallu",600);
+Query OK, 1 row affected (0.11 sec)
+
+mysql> insert into emp values(5,"vinu",700);
+Query OK, 1 row affected (0.07 sec)
+
+mysql> select * from emp;
++------+-------+------+
+| eid  | ename | esal |
++------+-------+------+
+|    1 | ajju  |  300 |
+|    2 | kallu |  400 |
+|    3 | dundu |  500 |
+|    4 | mallu |  600 |
+|    5 | vinu  |  700 |
++------+-------+------+
+5 rows in set (0.03 sec)
+
+mysql>
+
+
+
+output:
+1	ajju	300
+2	kallu	400
+3	dundu	500
+4	mallu	600
+5	vinu	700
+6	siddu	800

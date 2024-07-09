@@ -1,0 +1,33 @@
+//program to demonstrate single Responsibility principle
+
+class ADDDemo
+{
+	public void add (int a,int b)
+	{
+		int res=a+b;
+		System.out.println("result="+res);
+	}
+}
+class Subdemo
+{
+	public void sub(int a,int b)
+	{
+		int res=a-b;
+		System.out.println("result="+res);
+	}
+}
+
+public class P20 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ADDDemo a1=new ADDDemo();
+		a1.add(4,2);
+		Subdemo s1=new Subdemo();
+		s1.sub(4,2);
+	}
+
+}
+*********************************output************************************************************
+result=6
+result=2

@@ -1,0 +1,46 @@
+//program to demonstrate static and dynamic binding
+
+class A
+{
+	int x=30;
+	public void m1()
+	{
+		System.out.println("from m1 x="+x);
+	}
+	public void m2()
+	{
+		System.out.println("from m2 x="+x);
+	}
+}
+class B extends A
+{
+	int y=50;
+	public void m1()
+	{
+		System.out.println("from m1 y="+y);
+	}
+	public void m3()
+	{
+		System.out.println("from m3 y="+y);
+	}
+}
+
+public class p32 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		A a1=new A();
+		a1.m1();
+		B b1=new B();
+		b1.m1();
+		A a2=new B();
+		a2.m1();
+		a2.m2();
+	}
+
+}
+*****************************output******************************
+from m1 x=30
+from m1 y=50
+from m1 y=50
+from m2 x=30

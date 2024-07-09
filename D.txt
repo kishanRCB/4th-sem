@@ -1,0 +1,10 @@
+package p2;
+import p1.B;
+import p1.A;
+public class D extends p1.B{
+	public void printx()
+	{
+		System.out.println("from class D x="+x);
+	}
+
+}
